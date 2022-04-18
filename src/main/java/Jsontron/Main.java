@@ -22,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException {
         String path = "src/main/resources/docEntrySchema.json";
-        String content = readFile(path);
+        String content = readFile(path); //
         Schema mySchema = SchemaParser.parseSchema(content);
         System.out.println(Renderer.jsonRenderer(mySchema.toString()));
 
