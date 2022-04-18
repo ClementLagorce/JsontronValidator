@@ -1,0 +1,36 @@
+{
+  "schema": {
+    "id": "schemaid1",
+    "title": "docEntrySchema",
+    "schemaVersion": "ISO Schematron 2016",
+    "defaultPhase": "phaseid1",
+    "phase": [
+      {
+        "id": "phaseid1",
+        "active": [
+          "patternid1"
+        ]
+      }
+    ],
+    "pattern": [
+      {
+        "id": "patternid1",
+        "title": "First pattern",
+        "rule": [
+          {
+            "id": "ruleid1",
+            "abstract": false,
+            "context": "/",
+            "assert":[
+              {
+                "id": "assertid1",
+                "test": "/DocumentEntry/doc",
+                "message": "docName must be test1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": {
+    "id": "schemaid1",
+    "title": "docEntrySchema",
+    "schemaVersion": "ISO Schematron 2016",
+    "defaultPhase": "phaseid1",
+    "phase": [
+      {
+        "id": "phaseid1",
+        "active": [
+          "patternid1",
+          "patternid2"
+        ]
+      }
+    ],
+    "pattern": [
+    ]
+  }
+}

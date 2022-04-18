@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentEntry>
+    <id>file</id>
+    <value>File</value>
+    <doc>
+        <docName value="test1" />
+    </doc>
+    <doc>
+        <docName value="test2" />
+    </doc>
+    <doc1>
+        <docName value="test1" />
+    </doc1>
+    <doc1>
+        <docName value="test2" />
+    </doc1>
+</DocumentEntry>
