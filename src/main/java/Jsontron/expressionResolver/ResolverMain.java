@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class ResolverMain {
@@ -34,8 +36,7 @@ public class ResolverMain {
         String xPathTest5 = "/DocumentEntry/id";
 
         Walker myWalker = new Walker(instanceData);
-        ResolverUtils.eval2("//docName", instanceData);
-
+        ResolverUtils.eval3("doc/docName//test/ho/8//iuzehf", instanceData);
 
         //Object result = ResolverUtils.eval(xPathTest1, instanceData);
         //System.out.println(result);
