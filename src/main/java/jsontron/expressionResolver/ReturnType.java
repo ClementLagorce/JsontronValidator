@@ -1,4 +1,4 @@
-package Jsontron.expressionResolver;
+package jsontron.expressionResolver;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
