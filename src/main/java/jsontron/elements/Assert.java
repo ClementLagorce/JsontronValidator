@@ -1,7 +1,7 @@
-package Jsontron.elements;
+package jsontron.elements;
 
-import Jsontron.exception.SchemaException;
-import Jsontron.dictionary.assertDictionary;
+import jsontron.exception.SchemaException;
+import jsontron.dictionary.assertDictionary;
 
 public class Assert {
 

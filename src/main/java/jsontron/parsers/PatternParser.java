@@ -1,9 +1,9 @@
-package Jsontron.parsers;
+package jsontron.parsers;
 
-import Jsontron.exception.SchemaException;
-import Jsontron.elements.Pattern;
-import Jsontron.elements.Rule;
-import Jsontron.dictionary.patternDictionary;
+import jsontron.exception.SchemaException;
+import jsontron.elements.Pattern;
+import jsontron.elements.Rule;
+import jsontron.dictionary.patternDictionary;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class PatternParser {

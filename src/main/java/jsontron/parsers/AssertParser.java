@@ -1,8 +1,8 @@
-package Jsontron.parsers;
+package jsontron.parsers;
 
-import Jsontron.elements.Assert;
-import Jsontron.exception.SchemaException;
-import Jsontron.dictionary.assertDictionary;
+import jsontron.elements.Assert;
+import jsontron.exception.SchemaException;
+import jsontron.dictionary.assertDictionary;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class AssertParser {

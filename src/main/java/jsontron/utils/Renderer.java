@@ -1,4 +1,4 @@
-package Jsontron.utils;
+package jsontron.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

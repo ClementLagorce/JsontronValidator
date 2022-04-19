@@ -1,4 +1,4 @@
-package Jsontron.utils;
+package jsontron.utils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 

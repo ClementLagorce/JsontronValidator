@@ -12,10 +12,15 @@
     ],
     "doc1": [
       {
-        "docName": "test1"
+        "docName": "test3",
+        "test": {
+          "doc": [
+            "caca"
+          ]
+        }
       },
       {
-        "docName": "test2"
+        "docName": "test4"
       }
     ]
   }

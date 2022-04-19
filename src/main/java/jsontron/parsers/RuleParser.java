@@ -1,9 +1,9 @@
-package Jsontron.parsers;
+package jsontron.parsers;
 
-import Jsontron.elements.Assert;
-import Jsontron.exception.SchemaException;
-import Jsontron.elements.Rule;
-import Jsontron.dictionary.ruleDictionary;
+import jsontron.elements.Assert;
+import jsontron.exception.SchemaException;
+import jsontron.elements.Rule;
+import jsontron.dictionary.ruleDictionary;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class RuleParser {

@@ -1,10 +1,10 @@
-package Jsontron.parsers;
+package jsontron.parsers;
 
-import Jsontron.exception.SchemaException;
-import Jsontron.elements.Pattern;
-import Jsontron.elements.Phase;
-import Jsontron.elements.Schema;
-import Jsontron.dictionary.schemaDictionary;
+import jsontron.exception.SchemaException;
+import jsontron.elements.Pattern;
+import jsontron.elements.Phase;
+import jsontron.elements.Schema;
+import jsontron.dictionary.schemaDictionary;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.github.fge.jackson.JsonLoader;
 

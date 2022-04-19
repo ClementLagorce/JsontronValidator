@@ -1,7 +1,7 @@
-package Jsontron.elements;
+package jsontron.elements;
 
-import Jsontron.exception.SchemaException;
-import Jsontron.dictionary.ruleDictionary;
+import jsontron.exception.SchemaException;
+import jsontron.dictionary.ruleDictionary;
 
 import java.util.ArrayList;
 import java.util.List;

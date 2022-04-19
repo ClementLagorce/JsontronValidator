@@ -1,4 +1,4 @@
-package Jsontron.dictionary;
+package jsontron.dictionary;
 
 public enum schemaDictionary {
     ID("id"),

@@ -1,9 +1,9 @@
-package Jsontron.parsers;
+package jsontron.parsers;
 
-import Jsontron.exception.SchemaException;
-import Jsontron.elements.Phase;
-import Jsontron.dictionary.phaseDictionary;
-import Jsontron.utils.ParseUtils;
+import jsontron.exception.SchemaException;
+import jsontron.elements.Phase;
+import jsontron.dictionary.phaseDictionary;
+import jsontron.utils.ParseUtils;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class PhaseParser {

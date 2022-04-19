@@ -1,20 +1,13 @@
-package Jsontron;
+package jsontron;
 
-import Jsontron.elements.Schema;
-import Jsontron.parsers.SchemaParser;
-import Jsontron.utils.Renderer;
-import com.fasterxml.jackson.databind.JsonSerializer;
-import com.jayway.jsonpath.JsonPath;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
+import jsontron.elements.Schema;
+import jsontron.parsers.SchemaParser;
+import jsontron.utils.Renderer;
 import org.xml.sax.SAXException;
 
-import javax.xml.namespace.QName;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.*;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
