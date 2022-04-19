@@ -4,7 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ResolverUtils {
 
@@ -35,11 +36,33 @@ public class ResolverUtils {
     }
 
     public static void eval3(String xPath, JsonNode instanceData) {
-        List<Integer> slashs = matchIndexes(xPath, "/");
-        List<Integer> doubleSlashs = matchIndexes(xPath, "//");
+        List<Integer> allSlashs = matchIndexes(xPath, "((?<!/)/(?!/))|(//)");
 
-        // fabriquer le tableau des mots qui sont derrière un slash et un double slash
+        List<String> words = detectWord(xPath, allSlashs);
 
+
+        // ranger les éléments de words dans 3 listes :
+        // - une liste de double slash
+        // - une liste de slash
+        // - une liste de nothing
+
+        // faire des tests avec des for sur ces 3 listes pour vérifier que les fonction qui utilisent findParents et tout fonctionnent bien
+        String test = "";
+    }
+
+    public static List<String> detectWord(String xPath, List<Integer> indexes) {
+        List<String> words = new ArrayList<>();
+        if (xPath.charAt(0) != '/') {
+            words.add(xPath.substring(0, indexes.get(0)));
+        }
+        for (int i = 0; i < indexes.size(); i++) {
+            if (i < indexes.size()-1) {
+                words.add(xPath.substring(indexes.get(i), indexes.get(i + 1)));
+            } else {
+                words.add(xPath.substring(indexes.get(i)));
+            }
+        }
+        return words;
     }
 
     public static JsonNode slash(JsonNode current, String key) {
@@ -57,11 +80,10 @@ public class ResolverUtils {
     public static List<Integer> matchIndexes(String xPath, String match) {
         List<Integer> result = new ArrayList<>();
 
-        int index = xPath.indexOf(match);
-        int matchLength = match.length();
-        while (index >= 0) {  // indexOf returns -1 if no match found
-            result.add(index);
-            index = xPath.indexOf(match, index + matchLength);
+        Pattern pattern = Pattern.compile(match);
+        Matcher matcher = pattern.matcher(xPath);
+        while(matcher.find()) {
+            result.add(matcher.start());
         }
         return result;
     }
@@ -99,7 +121,7 @@ public class ResolverUtils {
                 }
             } else {
                 for (JsonNode arrayNode : temp) {
-                    isValid = isNodeValid(arrayNode, keysNotConsumed);
+                    isValid = isNodeValid(arrayNode, keysNotConsumed, result);
                 }
             }
         }
